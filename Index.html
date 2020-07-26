@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<title>SignIn page</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="App.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+			<form id="Signin" onSubmit=confirmPass()>
+				<img src="epam logo.jpg" alt="Avatar"
+					style="width: 39px; border-radius: 50%; float: left">
+				<h2 class="text">Registartion Form</h2>
+				<br />
+				<div class="form-content">
+					<input type="FirstName" class="form-control"
+						placeholder="FirstName"> <br />
+				</div>
+				<div class="form-content">
+					<input type="LastName" class="form-control" placeholder="LastName">
+					<br />
+				</div>
+				<div class="form-content">
+					<input type="email" class="form-control" id="email"
+						placeholder="mail@example.com" onchange="change2()"> <br />
+				</div>
+				<div class="form-content">
+					<input type="text" class="form-control" id="phone"
+						placeholder="PhoneNumber" onchange="change1()"> <br />
+				</div>
+				<div class="form-content">
+					<input type ="password" class="form-control" id="pwd1"
+						placeholder="Password"> <br />
+				</div>
+				<div class="form-content">
+					<input type ="password" class="form-control" id="pwd2"
+						placeholder="ConfirmPassword"> <br />
+				</div>
+				<div class="form-content">
+					<button type="submit" class="btn btn-block btn-info" id="Login">Sign
+						Up</button>
+					<br />
+				</div>
+				<script>
+					function change1() {
+						var a = document.getElementById("phone");
+						if ((a.value.length != 10) || (isNaN(a.value))) {
+							alert("Enter a valid phone number");
+							a.value = '';
+						}
+					}
+					function change2() {
+						var b = document.getElementById("email");
+						if (b.value.indexOf('@') < 1
+								|| (b.value.lastIndexOf('.') < b.value
+										.indexOf('@') + 2)
+								|| (b.value.lastIndexOf('.') + 2 >= b.value.length)) {
+							alert("Enter a valid email");
+							b.value = '';
+						}
+					}
+					
+					function confirmPass() {
+						var pass = document.getElementById("pwd1").value;
+						var confPass = document.getElementById("pwd2").value;
+						if (pass != confPass) {
+							alert("Wrong confirm password !");
+							return false;
+						}
+						return true;
+					}
+				</script>
+			</form>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div>
+	</div>
+</body>
+
+

@@ -1,0 +1,32 @@
+body
+  {
+    background-color:#99CCFF;
+  }
+#Signin{
+    background-color:rgb(250,250,250);
+    
+    border-radius:4px;
+    width:400px;
+    height:500px;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+.text{
+    margin-top:initial;
+    text-align:center;
+}
+.form-content{
+    padding:10x;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+hr{
+    size:10em;
+}
